@@ -3,7 +3,8 @@ function getDivisorsCount(number) {
 let i = 0
 let sum = 0
 
-    if (number < 0 || !Number.isInteger(number)) {
+    if (number < 0 || !Number.isInteger(number) || typeof number !== 'number'){
+        number = NaN
         alert(`${number} должен быть целым числом и больше нуля!`)
     }
     
@@ -20,4 +21,4 @@ let sum = 0
 
 }
 
-console.log (getDivisorsCount(12));
+console.log (getDivisorsCount(10));
